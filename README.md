@@ -183,8 +183,11 @@ In the Homebridge UI go to plugins and then search for this plugin and install i
 On Plugins, go to HTTP Advanced Accessory plugin click on the 3 dots, and go to JSON config.<br>
 ![go to JSON config file](/Images/JSON_config.png)
 
-To add a garage door copy and paste the code from `homebridge-http-advanced-accessory.json`.<br>
-If you want to add other accessories just click on the plus button and do the same thing as above.<br>
+To add the Exterior garage door copy and paste the code from `Exterior.json`.<br>
+Now i need to add the Interior garage door, for that i just click on the plus button and then copy and paste the code from `Interior.json`.<br>
+
+>[!Note]
+> Be aware to change the `YOUR_HOMEBRIDGE_USERNAME`, `YOUR_HOMEBRIDGE_PASSWORD` and `YOUR_RASPBERRY_PI_PICOW_IP_ADDRESS` variables to the ones you have. 
 
 Remember that when you're done you need to `restart Homebridge` so that the changes have an effect.<br>
 
