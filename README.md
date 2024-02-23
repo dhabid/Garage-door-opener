@@ -4,33 +4,50 @@
 This project sums up what i did to remotely control my garage door using a Raspberry Pi, Home Assistant and Homebridge.
 
 ## Table of Contents
-[Introduction]()
-[Prerequisites]()
-[Raspberri pi pico w]()
-[Installations]()
-[Soldering]()
-[Choose pins]()
-[Codes to test]()
-[Code on Raspberry pi pico w]()
-[Home Assistant]()
-[Install Home Assistant]()
-[Install Homebridge]()
-[Step 1: Add the repository]()
-[Step 2: Installing the Portainer add-on]()
-[Step 3: Setting up Portainer]()
-[Step 4: Deploying HomeBridge]()
-[Homebridge]()
-[Install plugin]()
-[Edit the JSON config file]()
-[Connect to your Garage]()
-[Remote Access]()
-[Step 1: DuckDNS domain name setup]()
-[Step 2: Port Forwarding]()
-[Step 3: DuckDNS Home Assistant install and setup]()
-[Step 4: Port Forward validation]()
-[Step 5: Internal/External URL configuration change]()
-[Step 6: Security checks]()
-[Extra]()
+[Introduction](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#introduction)
+
+[Prerequisites](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#prerequisites)
+
+[Raspberri pi pico w](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#raspberri-pi-pico-w)
+
+* [Installations](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#installations)
+  
+* [Soldering](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#soldering)
+ 
+* [Choose pins](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#choose-pins)
+
+[Codes to test](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#codes-to-test)
+
+[Code on Raspberry pi pico w](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#code-on-raspberry-pi-pico-w)
+
+[Home Assistant](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#home-assistant)
+
+* [Install Home Assistant](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#install-home-assistant)
+  
+* [Install Homebridge](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#install-homebridge)
+    - [Step 1: Add the repository](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#step-1-add-the-repository)
+    - [Step 2: Installing the Portainer add-on](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#step-2-installing-the-portainer-add-on)
+    - [Step 3: Setting up Portainer](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#step-3-setting-up-portainer)
+    - [Step 4: Deploying HomeBridge](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#step-4-deploying-homebridge)
+      
+[Homebridge](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#homebridge)
+
+* [Install plugin](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#install-plugin)
+
+* [Edit the JSON config file](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#edit-the-json-config-file)
+  
+[Connect to your Garage](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#connect-to-your-garage)
+
+[Remote Access](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#remote-access)
+
+* [Step 1: DuckDNS domain name setup](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#step-1-duckdns-domain-name-setup)
+* [Step 2: Port Forwarding](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#step-2-port-forwarding)
+* [Step 3: DuckDNS Home Assistant install and setup](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#step-3-duckdns-home-assistant-install-and-setup)
+* [Step 4: Port Forward validation](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#step-4-port-forward-validation)
+* [Step 5: Internal/External URL configuration change](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#step-5-internalexternal-url-configuration-change)
+* [Step 6: Security checks](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#step-6-security-checks)
+
+[Extra](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#extra)
 
 ## Introduction
 This project was made because i wanted to control my garage doors with my phone.<br>
