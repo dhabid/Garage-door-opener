@@ -3,7 +3,7 @@
 ## Summary
 This project sums up what i did to remotely control my garage door using a Raspberry Pi, Home Assistant and Homebridge.
 
-## Table of Contents
+### Table of Contents
 [Introduction](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#introduction)
 
 [Prerequisites](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#prerequisites)
