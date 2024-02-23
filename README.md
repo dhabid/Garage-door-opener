@@ -56,7 +56,7 @@ Because I have an iPhone and other people who live with me don't, i will be usin
 ## Prerequisites
 For this project you will need: <br>
 * raspberry pi pico W or raspberry pi pico WH [8€](https://www.raspberrypi.com/products/raspberry-pi-pico/) <br>
-* rele [1,40€](https://mauser.pt/catalog/product_info.php?products_id=096-7804) <br>
+* relay [1,40€](https://mauser.pt/catalog/product_info.php?products_id=096-7804) <br>
 * reed switch [11€](https://www.amazon.es/-/pt/dp/B0BNBBZK7C/ref=sr_1_6?keywords=interruptores%2Bmagn%C3%A9ticos&s=tools&sr=1-6&th=1) <br>
 * jumper cables
 * soldering
