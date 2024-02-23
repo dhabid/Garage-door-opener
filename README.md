@@ -338,7 +338,8 @@ homekit:
     port: 51828
     filter:
       include_entities:
-        - cover.garage_door
+        - cover.interior
+        - cover.exterior
 ```
 > [!NOTE]  
 > In include_entities you can put all the accessories you want.
