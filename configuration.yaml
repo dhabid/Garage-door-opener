@@ -22,4 +22,3 @@ homekit:
       include_entities:
         - cover.interior
         - cover.exterior
-        - cover.principal
