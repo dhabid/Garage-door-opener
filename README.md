@@ -1,7 +1,7 @@
 # Remotely open your garage door
 
 ## Summary
-This project sums up what i did to remotely control my garage door using a Raspberry Pi, Home Assistant and Homebridge.
+This project is a step-by-step guide of what i did to remotely control my garage door using a Raspberry Pi, Home Assistant and Homebridge.
 
 ### Table of Contents
 [Introduction](https://github.com/dhabid/Garage-door-opener/blob/main/README.md#introduction)
@@ -64,29 +64,29 @@ For this project you will need: <br>
 
 # Raspberri pi pico w
 ## Installations
-To do all this things first you will need to install some things on your Raspberry Pi.<br> You can do this tutorial and by the end you should be good to go to the next step:<br>
+To do all these things first you will need to install some things on your Raspberry Pi.<br> You can do this tutorial and by the end, you should be good to go to the next step:<br>
 [raspberry pi pico w installations](https://projects.raspberrypi.org/en/projects/introduction-to-the-pico/0) <br>
 
 ## Soldering
-If you didn't buy the raspberry pi pico WH you need to sold the pins.<br>
+If you didn't buy the Raspberry Pi Pico WH you need to sold the pins.<br>
 It should stay like this:<br>
 <p align="center">
     <img width="600" height="350" src="/Images/soldered_pins.jpg">
 </p>
 
 ## Choose pins
-Next you will need to choose what pins you will use.<br>
+Next, you will need to choose what pins you will use.<br>
 
 ### Interior Garage
 I've used the **`pin GP6 for the reed switch that tells if the garage door is open`** and the **`pin GP12 to confirm if the garage door is closed`**.<br> Note that you need to connect the other cable of the reed switch to GND, it doesn't matter which cable.<br>
 
-On the relay i've connected the **`IN1 of the relay to pin GP16`**, the **`GND of the relay to pin 38`** and the **`VCC of the relay to pin 36`**.<br> The relay will be used in NO(Normally open) mode.<br>
+On the relay i've connected the **`IN1 of the relay to pin GP16`**, the **`GND of the relay to pin 38`**, and the **`VCC of the relay to pin 36`**.<br> The relay will be used in NO(Normally open) mode.<br>
 > [!TIP]
 > Normally open (NO) contacts connect the circuit when the relay is activated; the circuit is disconnected when the relay is inactive.<br> Normally closed (NC) contacts disconnect the circuit when the relay is activated; the circuit is connected when the relay is inactive.<br>
 
 ### Exterior Garage
 I've used the **`pin GP0 to confirm if the garage door is closed`**.
-Because the relay have 2 channels i've connected the **`IN2 of the relay to pin GP20`**.
+Because the relay has 2 channels i've connected the **`IN2 of the relay to pin GP20`**.
 
 You can see the pinout of the raspberry pi pico w below:
 <p align="center">
@@ -97,27 +97,27 @@ You can see the pinout of the raspberry pi pico w below:
 > ## Codes to test
 > Here you can do some tests to check if everything is ok.
 > ### Test relay with LED
-> To test the relay with a LED copy the code in `test_relay_with_LED.py` and paste it in thonny editor.<br> To connect the output of the relay connect the COM to the ground of the LED and the NO to the VCC of the LED.
+> To test the relay with an LED copy the code in `test_relay_with_LED.py` and paste it into thonny editor.<br> To connect the output of the relay connect the COM to the ground of the LED and the NO to the VCC of the LED.
 > ### Test relay and sensors with LED
-> To test the relay and sensors with a LED copy the code in `test_relay_reedswitch_with_LED.py` and paste it in thonny editor. Then the LED should turn ON when the sensor is closed.
+> To test the relay and sensors with an LED copy the code in `test_relay_reedswitch_with_LED.py` and paste it in thonny editor. Then the LED should turn ON when the sensor is closed.
 > ### See your IP address
-> To see your IP address just copy the code in `connect_pi_to_network_and_show_IP.py` and paste it in thonny editor.<br> You just need to change the WIFI settings to yours, sot the pico can connect to your WIFI. Then run the code.<br>
+> To see your IP address just copy the code in `connect_pi_to_network_and_show_IP.py` and paste it into thonny editor.<br> You just need to change the WIFI settings to yours, sot the pico can connect to your WIFI. Then run the code.<br>
 > That IP address is the IP of your rasberry pi pico w, take note of the IP address you will need it down below.<br>
 
 
 ## Code on Raspberry pi pico w
 ### Code to control the garage door
-To control your garage door just copy the code in `main.py` and paste it in thonny editor.<br>
+To control your garage door just copy the code in `main.py` and paste it into thonny editor.<br>
 > [!Important]
-> **You need to keep the name of the file main.py to the code be always running**
+> **You need to keep the name of the file main.py so the code is always running**
 
 > [!Note]
-> Remember to change the WIFI settings and the pins you connected the reed switchs and the relay.<br>
+> Remember to change the WIFI settings and the pins you connected the reed switches and the relay.<br>
 
 # Home Assistant
 
 ## Install Home Assistant
-Now you need to install home assistant operating system on your raspberry pi 4.<br>
+Now you need to install Home Assistant operating system on your raspberry pi 4.<br>
 To do this just go to [this site](https://www.home-assistant.io/installation/raspberrypi/) and follow the steps. <br>
 
 Within a few minutes after connecting the Raspberry Pi, you will be able to reach your new Home Assistant.
@@ -138,7 +138,7 @@ Now you should see a section like this:
 
 ### Step 2: Installing the Portainer add-on
 * Now on that section `click on Portainer and install it`.
-* Once installed `disable Protection Mode` and `enable Watchdog` and click on start.
+* Once installed `disable Protection Mode` and `enable Watchdog` and click on Start.
 * After a moment `click on Open Web UI` and `login to Portainer`.
 
 ### Step 3: Setting up Portainer
@@ -180,28 +180,28 @@ In the Homebridge UI go to plugins and then search for this plugin and install i
 ![http-advanced-accessory-plugin](/Images/http-advanced-accessory-plugin.png)
 
 ### Edit the JSON config file
-On Plugins, go to HTTP Advanced Accessory plugin click on the 3 dots and go to JSON config.<br>
+On Plugins, go to HTTP Advanced Accessory plugin click on the 3 dots, and go to JSON config.<br>
 ![go to JSON config file](/Images/JSON_config.png)
 
-To add the Exterior garage door copy and paste the code from `Exterior.json`.<br>
-Now i need to add the Interior garage door, for that i just click on the plus button and then copy and paste the code from `Interior.json`.<br>
+To add a garage door copy and paste the code from `homebridge-http-advanced-accessory.json`.<br>
+If you want to add other accessories just click on the plus button and do the same thing as above.<br>
 
 Remember that when you're done you need to `restart Homebridge` so that the changes have an effect.<br>
 
-After that in the main page a QR code like this should appear:<br>
+After that on the main page, a QR code like this should appear:<br>
 <p align="center">
     <img width="250" height="250" src="/Images/pair_Homekit.png">
 </p>
 
 >[!Important]
->`Keep that 7 digit code`. You will need it in the next step.
+>`Keep that 7-digit code`. You will need it in the next step.
 
 
 ### Add the Homebridge Accessories to Home Assistant
 To add the Homebridge accessories to Home Assistant you just need to go to the `main page in Home Assistant` -> `Settings` -> `Devices and Services` and something like this should appear in discovered:<br>
 ![Homekit Device](/Images/Homekit_device.png)
 
-`Click on it and then paste the 7 digit` code obtained in the step before.
+`Click on it and then paste the 7-digit code` obtained in the step before.
 
 # Connect to your Garage
 
@@ -221,7 +221,7 @@ To do that just take a multimeter or a pliers and connect two screws like the pi
 * Once you've found what pins open your garage door, just reconnect the COM of the relay to the ground pin you just discovered on your motor and the NO to the other pin  that opens and closes the garage door.
 
 
-Once that is completed you can turn on the electricity on the motor and go to your phone and open the garage door on Home Assistant app!!!
+Once that is completed you can turn on the electricity on the motor, go to your phone and open the garage door on Home Assistant app!!!
 
 # Remote Access
 Now you can control your garage door with your network.<br>
@@ -229,7 +229,7 @@ To control the garage door from anywhere you can watch [this video](https://www.
 
 ## Step 1: DuckDNS domain name setup
 * Go to [DuckDNS webstite](https://www.duckdns.org/) and log in
-* Once you logged in you can `create a subdomain`. It can be anything you want as long as it is not already in use.<br>
+* Once you log in you can `create a subdomain`. It can be anything you want as long as it is not already in use.<br>
 > [!NOTE]  
 > This will be the URL that you will be using to connect to your HomeAssistant.
 * Change the current IP to 8.8.8.8 and save it.
@@ -238,12 +238,12 @@ To control the garage door from anywhere you can watch [this video](https://www.
 
 ## Step 2: Port Forwarding
 > [!Tip]
-> Port forwarding is a way of allowing people from the internet to connect to you. A port forward puts a device outside of your router, as if it was directly connected to the internet.<br>
+> Port forwarding is a way of allowing people from the internet to connect to you. A port forward puts a device outside of your router as if it was directly connected to the internet.<br>
 
-Next you need to go to your router webpage and configure Port Forward.<br>
+Next, you need to go to your router webpage and configure Port Forward.<br>
 If you don't know your router webpage you can check your router. But usually is something like http://192.168.1.1/.<br>
 If you don't know how to Port Forward check [this website](https://portforward.com/) and search for your router.<br>
-In my case (Vodafone Gigabox router) this were the steps:
+In my case (Vodafone Gigabox router) these were the steps:
 * Go to `Internet`->`Port Mapping`->`Click the Plus Button`
 Something like this should appear:<br>
 <p align="center">
@@ -268,13 +268,13 @@ Add another Port Mapping.
 * On `LAN Port put 8581`<br>
 
 > [!Tip]  
-> Port 8183 will be used for mobile apps and your desktop. Port 443 is useful for services like Alexa and Google Home. Port 8581 is for access your Homebridge.
+> Port 8183 will be used for mobile apps and your desktop. Port 443 is useful for services like Alexa and Google Home. Port 8581 is for access to your Homebridge.
 
 ## Step 3: DuckDNS Home Assistant install and setup
 Now you need to install DuckDNS add-on.<br>
 * To do that `in Home Assistant go to Add-on store`, `search for DuckDNS add-on and install it`.<br>
 * `Enable Watchdog` and `Auto update`.<br>
-* Go to the `Configuration page` and `paste the token` that you copy in the DuckDNS webpage.
+* Go to the `Configuration page` and `paste the token` that you copy into the DuckDNS webpage.
 * Put `true in accept_terms`.
 * Put `your domain name in the domains box` and `save it`.
 * `Go to the Log page and keep refreshing` until you see something like this:<br>
@@ -282,7 +282,7 @@ Now you need to install DuckDNS add-on.<br>
     <img width="500" height="500" src="/Images/Logpage.png">
 </p>
 
-* Once that's done `go to the DuckDNS webpage and replace 8.8.8.8 by your public IP adress` (the one blurred above 31.48.x.x)
+* Once that's done `go to the DuckDNS webpage and replace 8.8.8.8 with your public IP address` (the one blurred above 31.48.x.x)
 * Go to your `Home Assistant Configuration.yaml and add this code`:
 ```
 # Loads default set of integrations. Do not remove.
@@ -298,8 +298,8 @@ http:
 ## Step 4: Port Forward validation
 * Go to `[https://canyouseeme.org/](https://canyouseeme.org/)`
 * In `Your IP put the blurred one` (in this case 31.48.x.x) and in `Port to check put 8123` and click Check Port
-* It should appear a success message, if it doesn't go back and check if you haven't enter any wrong information 
-* `Repeat these steps for port 443 and 8581`.
+* It should appear a successful message, if it doesn't go back and check if you haven't entered any wrong information 
+* `Repeat these steps for ports 443 and 8581`.
 
 ## Step 5: Internal/External URL configuration change
 
@@ -323,11 +323,11 @@ http:
 ```
 > [!NOTE]  
 > This will only allow 5 login attempts from a certain IP address. Once those login attempts have been reached it will automatically blacklist that IP address.
-* Next go to `Configurations`, `check your configuration` and `restart the Home Assistant`.
+* Next go to `Configurations`, `check your configuration`, and `restart the Home Assistant`.
 
 # Extra
 
-If you want to add your accessories to Apple Homekit app you can [watch this video](https://www.youtube.com/watch?v=9G2f_c3fnyc&t=117s) or follow these steps:
+If you want to add your accessories to the Apple Homekit app you can [watch this video](https://www.youtube.com/watch?v=9G2f_c3fnyc&t=117s) or follow these steps:
 * Go to `Configuration.yaml` file and `add this code`:
 ```
 homekit:
@@ -335,15 +335,13 @@ homekit:
     port: 51828
     filter:
       include_entities:
-        - cover.interior
-        - cover.exterior
-        - cover.principal
+        - cover.garage_door
 ```
 > [!NOTE]  
 > In include_entities you can put all the accessories you want.
-* Next go to `Configurations`, `check your configuration` and `restart the Home Assistant`.
-* Once is restarted, in Notifications you should see a Homekit Pairing QR code.
-* Open the Home app in your iphone, scan it and add the Bridge.
+* Next go to `Configurations`, `check your configuration`, and `restart the Home Assistant`.
+* Once is restarted, in Notifications, you should see a Homekit Pairing QR code.
+* Open the Home app on your iPhone, scan it and add the Bridge.
 > [!NOTE]  
-> This accessories will not work remotely on the Apple Homekit app.<br>
-> You can control the remotely only on your Home Assistant app.
+> These accessories will not work remotely on the Apple Homekit app.<br>
+> You can control them remotely only on your Home Assistant app.
