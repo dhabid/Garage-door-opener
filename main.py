@@ -9,8 +9,8 @@ led = Pin('LED', Pin.OUT)
 led.on()
 
 # WiFi Settings. Change these before uploading to the Pi Pico
-WIFI_SSID = 'Vodafone-ACFE67'
-WIFI_PASSWORD = '4MFAJFFD6X9X6JMA'
+WIFI_SSID = 'YOUR_WIFI_SSID'
+WIFI_PASSWORD = 'YOUR_WIFI_PASSWORD'
 
 # Set up pins for the first garage door
 OPEN_PIN = 6
