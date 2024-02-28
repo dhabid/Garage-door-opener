@@ -97,7 +97,11 @@ You can see the pinout of the raspberry pi pico w below:
 > ## Codes to test
 > Here you can do some tests to check if everything is ok.
 > ### Test relay with LED
-> To test the relay with an LED copy the code in `test_relay_with_LED.py` and paste it into thonny editor.<br> To connect the output of the relay connect the COM to the ground of the LED and the NO to the VCC of the LED.
+> To test the relay with an LED copy the code in `test_relay_with_LED.py` and paste it into thonny editor.<br>
+> Add the LED to the breadboard, connecting its Negative Leg to one of the Ground Pins of the Pico.<br>
+> Connect one side of the Resistor to the Positive Leg of the LED.<br>
+> Connect the other side of the Resistor to the Common terminal of the Relay.<br>
+> Connect the Normally Open terminal of the Relay to the VBUS pin of the Pico.<br>
 > ### Test relay and sensors with LED
 > To test the relay and sensors with an LED copy the code in `test_relay_reedswitch_with_LED.py` and paste it in thonny editor. Then the LED should turn ON when the sensor is closed.
 > ### See your IP address
