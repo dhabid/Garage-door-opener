@@ -3,7 +3,7 @@ import time
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
-wlan.connect("Vodafone-ACFE67","4MFAJFFD6X9X6JMA")#"nome da internet","Password"
+wlan.connect("Wi-FI name","Password")#"Wi-FI name","Password"
 
 wait = 10
 while wait > 0:
