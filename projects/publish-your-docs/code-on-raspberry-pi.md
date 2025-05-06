@@ -1,2 +1,0 @@
-# Code on raspberry pi
-
